@@ -1,0 +1,285 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 0.1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+:root{
+    --primaryColor:#302b63;
+    --secondaryColor:#24243e;   
+    
+    --tertiarycolor:rgb(43, 43, 52);
+    --user_text:rgb(82,33,230);
+    --bot-text:rgb(195, 183, 250);
+    
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color:aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.box{
+    height: 90%;
+    width: 80%;
+    background-color: rgb(254, 252, 252);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+}
+.profile{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #6441A5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+}
+.chat_box{
+    height: 100%;
+    width: 70%;
+    border: none;
+    border-radius: 25px;
+    position: relative;
+    
+}
+.image{
+    height: 250px;
+    width: 250px;
+    border: none;
+    border-radius: 50%;
+    background-size: 160% 100%;
+    margin-bottom: 5vmin;
+    background-image: url("https://w0.peakpx.com/wallpaper/762/338/HD-wallpaper-kimetsu-no-yaiba-demon-slayer-kochou-shinobu-purple-flowers-katana-butterflies-anime.jpg");
+    border: 5px solid antiquewhite;
+    border-top: none;
+    border-left: none;
+}
+.name{
+    font-size: 5vmin;
+    margin-bottom: 1vmin;
+    color: antiquewhite;
+    text-align: center;
+}
+.status{
+    font-size: 2vmin;
+    margin-bottom: 1vmin;
+    color: antiquewhite;
+    text-align: center;
+}
+.icons{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vmin;
+    color: antiquewhite;
+}
+.icons i{
+    margin: 0 5vmin;
+    font-size: 3.5vmin;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.chat{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.message{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #6441A5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;   
+    bottom: 0;
+    left: 0;
+}
+input{
+    height: 7vmin;
+    width: 80%;
+    border: 1px solid black ;
+    border-radius: 10px;
+    background-color: var(--bot-text);
+    border: none;
+    outline: none;
+    font-size: 4vmin;
+    padding: 1vmin;
+}
+.message i{
+    font-size: 3.5vmin;
+    color:antiquewhite;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+
+}
+i:hover{
+    scale: 1.2;
+    color: var(--bot-text);
+}
+section{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2vmin;
+}
+#user_section{
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: antiquewhite;
+}
+.bot_message{
+    height: auto;
+    max-width: 45vmin;
+    background-color: #cbb7ef;
+    border: none;
+    border-radius: 25px;
+    padding: 3.5vmin;
+    line-height: 3vmin;
+
+}
+.user_message{
+    height: auto;
+    max-width: 45vmin;
+    background: #6441A5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-radius: 25px;
+    padding: 3.5vmin;
+    line-height: 3vmin;
+}
+.profile_mobile{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    
+    .box{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .profile{
+        display: none;
+    }
+    .profile_mobile{
+        display: flex;
+        height: auto;
+        padding: 4vmin 0vmin;
+        background: #6441A5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius:0px 0px 0px 50px;
+
+    }
+    .profile_image{
+        background-image: url("https://w0.peakpx.com/wallpaper/762/338/HD-wallpaper-kimetsu-no-yaiba-demon-slayer-kochou-shinobu-purple-flowers-katana-butterflies-anime.jpg");
+        background-size: 170% 120%;
+    }
+    .profile_image{
+        height: 12vmin;
+        width: 12vmin;
+        border: none;
+        border-radius: 50%;
+        background-color: antiquewhite;
+    }
+    .name_status{
+        height: 100%;
+        width: 50%;
+        color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .utilities{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .utilities i{
+        font-size: 4vmin;
+        color: antiquewhite;
+    }
+    .mob_name{
+        font-size: 5vmin;
+    }
+    .mob_status{
+        font-size: 2.5vmin;
+    }
+    .bot_message{
+        line-height: 5vmin;
+    }
+    .user_message{
+        line-height: 5vmin;
+    }
+    input{
+        height: 10vmin;
+        width: 75%;
+        
+    }
+    .message i{
+        font-size: 7vmin;
+    }
+    .chat_box{
+        height: 100%;
+        width: 100%;
+        border-radius: opx;
+        
+    }
+
+}
+
